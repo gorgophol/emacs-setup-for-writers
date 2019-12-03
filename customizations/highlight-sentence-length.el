@@ -31,7 +31,7 @@
 
 (require 'thingatpt)
 
-(defcustom hsl-colors
+(defcustom highlight-sentence-length-colors
   '(
     (1   "#f00") ;feuerrot
     (2   "#f06") ;purpurrot
@@ -62,12 +62,18 @@
       :group 'highlight-sentence-length
       :type 'list)
 
+(defcustom highlight-sentence-length-max-sentence-length 1000
+  "Maximum length of a sentence in characters. Longer sentences are split."
+  :group 'highlight-sentence-length
+  :type 'number)
+
 (defun colorize-current-sentence ()
   "Count the number of words in the current sentence."
   (interactive)
   (save-mark-and-excursion
    (with-silent-modifications
      (let ((sentence-end-double-space nil))
+       ;; move forward if not at the end, so moving backwards will be at the beginning of the current sentence.
        (when (not (looking-at (sentence-end)))
          (forward-sentence))
        (let ((end (+ 1 (point))))
@@ -86,23 +92,23 @@
 
 (defun color-for-sentence-length (number-of-words)
   "Get the color for the given NUMBER-OF-WORDS."
-  (choose-matching-color hsl-colors number-of-words))
+  (choose-matching-color highlight-sentence-length-colors number-of-words))
 
 (defun highlight-sentence-length (&optional begin end length)
   "Colorize a buffer or the region between BEGIN and END up to LENGTH by its chars."
   (interactive)
   (let (
         (begin (if (not begin)
-                   1
+                   (point-min)
                  begin))
         (end (if (not end)
                  (point-max)
                end)))
-    (save-excursion
-      (goto-char (point-min))
+    (save-mark-and-excursion
+      (goto-char begin)
       (with-silent-modifications
         (let ((sentence-end-double-space nil))
-          (while (string-match "[^ \n\r	]+" (buffer-substring (point) (point-max)))
+          (while (string-match "[^ \n\r	]+" (buffer-substring (point) (min (+ (point) highlight-sentence-length-max-sentence-length) end)))
             (let ((start (point)))
               (forward-sentence)
               (message (number-to-string (count-words-region start (+ 1 (point)))))
@@ -111,6 +117,7 @@
                                  `(:foreground
                                    ,(color-for-sentence-length
                                      (count-words-region start (+ 1 (point))))))
+              ;; this will move backwards if necessary
               (colorize-current-sentence))))))))
 
 
