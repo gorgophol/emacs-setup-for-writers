@@ -930,6 +930,11 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
 ;; load sentence-length-highlighting from Arne
 (load "highlight-sentence-length.el")
 
+;; fallback for commands if hyper is locked via numlock
+(defun numlockwarning ()
+  (interactive)
+  (message "numlock?"))
+(global-set-key (kbd "H-M-x") 'numlockwarning)
 
 ;; use a NORMAL line mode
 (global-visual-line-mode 1)
