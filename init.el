@@ -890,9 +890,10 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
  '(org-agenda-files
    (quote
     ("~/Dropbox/benjamin/schreiben/2018-Stalker/stalker.org")))
+ '(org-confirm-babel-evaluate nil)
  '(package-selected-packages
    (quote
-    (which-key crux ess auctex htmlize helm-flx flx helm spotlight reveal-in-osx-finder dired-ranger peep-dired dired-narrow dired+ comment-dwim-2 easy-kill shrink-whitespace yasnippet volatile-highlights use-package swiper session rainbow-mode rainbow-delimiters page-break-lines multiple-cursors expand-region diminish avy anzu)))
+    (org-plus-contrib which-key crux ess auctex htmlize helm-flx flx helm spotlight reveal-in-osx-finder dired-ranger peep-dired dired-narrow dired+ comment-dwim-2 easy-kill shrink-whitespace yasnippet volatile-highlights use-package swiper session rainbow-mode rainbow-delimiters page-break-lines multiple-cursors expand-region diminish avy anzu)))
  '(session-use-package t nil (session)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -938,3 +939,7 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
 
 ;; use a NORMAL line mode
 (global-visual-line-mode 1)
+
+
+(require 'package)
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
