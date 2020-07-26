@@ -889,7 +889,7 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
  ;; If there is more than one, they won't work right.
  '(org-agenda-files
    (quote
-    ("~/Dropbox/benjamin/schreiben/2018-Stalker/stalker.org")))
+    ("~/pCloudDrive/benjamin/schreiben/2016_Zeitreise_Hebamme/Hebamme1.org" "~/Dropbox/benjamin/schreiben/2018-Stalker/stalker.org")))
  '(org-confirm-babel-evaluate nil)
  '(package-selected-packages
    (quote
@@ -901,6 +901,7 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;; LOAD ALL OTHER STUFF ;;;;;;;;;;;;;;;;;;;
