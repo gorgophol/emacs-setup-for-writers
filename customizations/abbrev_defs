@@ -55,6 +55,10 @@
     ("cih" "ich" nil 1)
     ("fürher" "früher" nil 0)
     ("natürlcih" "natürlich" nil 1)
+    ("schließich" "schließlich" nil 0)
+    ("scih" "sich" nil 0)
+    ("sit" "ist" nil 1)
+    ("verständlcih" "verständlich" nil 0)
    ))
 
 (define-abbrev-table 'outline-mode-abbrev-table '())
@@ -66,6 +70,8 @@
 (define-abbrev-table 'prog-mode-abbrev-table '())
 
 (define-abbrev-table 'select-tags-table-mode-abbrev-table '())
+
+(define-abbrev-table 'shell-mode-abbrev-table '())
 
 (define-abbrev-table 'snippet-mode-abbrev-table '())
 
