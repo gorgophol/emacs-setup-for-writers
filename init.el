@@ -494,12 +494,21 @@ If region is active, apply to active region instead."
 ;; spelling                                                               ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;(use-package flyspell
+;;  :diminish (flyspell-mode . "spell")
+;;  :config
+;;  (set-face-attribute 'flyspell-incorrect nil :background
+;;"selectedKnobColor" :underline '(:color "red") :weight 'bold)
+;;  )
+
+;; newly ADDED (only this paragraph) for AUTOCORRECTION
 (use-package flyspell
-  :diminish (flyspell-mode . "spell")
-  :config
-  (set-face-attribute 'flyspell-incorrect nil :background
-"selectedKnobColor" :underline '(:color "red") :weight 'bold)
-  )
+ :defer 1
+  :custom
+  (flyspell-abbrev-p t)
+  (flyspell-issue-message-flag nil)
+  (flyspell-issue-welcome-flag nil)
+  (flyspell-mode 1))
 
 ;; turn on flyspell in desired modes
 (add-hook 'text-mode-hook 'flyspell-mode)
@@ -512,6 +521,15 @@ If region is active, apply to active region instead."
 (setq ispell-local-dictionary-alist
       `(("british" "[[:alpha:]]" "[^[:alpha:]]" "[']" t ("-d" "en_GB") nil
 utf-8)))
+
+;; newly ADDED (only this paragraph) for AUTOCORRECTION
+(use-package flyspell-correct-ivy
+  :after flyspell
+  :bind (:map flyspell-mode-map
+        ("C-;" . flyspell-correct-word-generic))
+  :custom (flyspell-correct-interface 'flyspell-correct-ivy))
+
+
 
 ;; CUSTOMISE - hunspell
 ;;
@@ -887,6 +905,16 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (leuven)))
+ '(custom-safe-themes
+   (quote
+    ("9bc6cf0c6a6c4b06b929e8cd9952478fa0924a4c727dacbc80c3949fc0734fb9" "2b2fff94a0e7e4f46d46b6cb072d43005a84460f6f812c5e63e0ec9e23b36ba0" "e9f642ee0dbd5638e40390b8b8eded9743f1426ad1390e7b2e5d3fa04efa2969" default)))
+ '(fci-rule-color "#282a2e")
+ '(flyspell-abbrev-p t)
+ '(flyspell-correct-interface (quote flyspell-correct-ivy))
+ '(flyspell-issue-message-flag nil)
+ '(flyspell-issue-welcome-flag nil)
+ '(flyspell-mode 1 t)
  '(org-agenda-files
    (quote
     ("~/pCloudDrive/benjamin/schreiben/2016_Zeitreise_Hebamme/Hebamme1.org" "~/Dropbox/benjamin/schreiben/2018-Stalker/stalker.org")))
@@ -944,3 +972,8 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
 
 (require 'package)
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+
+;; use abrev for autocorrection
+(setq abbrev-file-name "~/.emacs.d/customizations/abbrev_defs")  ;; tell emacs where to read abbrev definitions from...
+(setq save-abbrevs 'silent)        ;; save abbrevs when files are saved
+(setq-default abbrev-mode t)       ;; always use abbrev mode
