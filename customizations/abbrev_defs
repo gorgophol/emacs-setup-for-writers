@@ -1,54 +1,4 @@
 ;;-*-coding: utf-8;-*-
-(define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
-
-(define-abbrev-table 'Custom-mode-abbrev-table '())
-
-(define-abbrev-table 'Info-edit-mode-abbrev-table '())
-
-(define-abbrev-table 'bibtex-mode-abbrev-table '())
-
-(define-abbrev-table 'calendar-mode-abbrev-table '())
-
-(define-abbrev-table 'comint-mode-abbrev-table '())
-
-(define-abbrev-table 'completion-list-mode-abbrev-table '())
-
-(define-abbrev-table 'diff-mode-abbrev-table '())
-
-(define-abbrev-table 'edit-abbrevs-mode-abbrev-table '())
-
-(define-abbrev-table 'elisp-byte-code-mode-abbrev-table '())
-
-(define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
-
-(define-abbrev-table 'epa-info-mode-abbrev-table '())
-
-(define-abbrev-table 'epa-key-list-mode-abbrev-table '())
-
-(define-abbrev-table 'epa-key-mode-abbrev-table '())
-
-(define-abbrev-table 'fundamental-mode-abbrev-table '())
-
-(define-abbrev-table 'global-abbrev-table '())
-
-(define-abbrev-table 'gnus-group-mode-abbrev-table '())
-
-(define-abbrev-table 'help-mode-abbrev-table '())
-
-(define-abbrev-table 'ivy-occur-grep-mode-abbrev-table '())
-
-(define-abbrev-table 'ivy-occur-mode-abbrev-table '())
-
-(define-abbrev-table 'lisp-mode-abbrev-table '())
-
-(define-abbrev-table 'message-mode-abbrev-table '())
-
-(define-abbrev-table 'messages-buffer-mode-abbrev-table '())
-
-(define-abbrev-table 'occur-edit-mode-abbrev-table '())
-
-(define-abbrev-table 'occur-mode-abbrev-table '())
-
 (define-abbrev-table 'org-mode-abbrev-table
   '(
     ("abischern" "absichern" nil :count 0)
@@ -99,13 +49,14 @@
     ("cih" "ich" nil :count 11)
     ("cnihts" "nichts" nil :count 0)
     ("dabie" "dabei" nil :count 0)
+    ("danek" "Danke" nil :count 0)
     ("daruaf" "darauf" nil :count 0)
     ("dekcung" "Deckung" nil :count 0)
     ("deutlcih" "deutlich" nil :count 5)
     ("dienem" "deinem" nil :count 1)
     ("dihc" "dich" nil :count 4)
-    ("dme" "dem" nil :count 5)
-    ("dne" "den" nil :count 12)
+    ("dme" "dem" nil :count 6)
+    ("dne" "den" nil :count 16)
     ("dneken" "denken" nil :count 0)
     ("dnen" "denn" nil :count 2)
     ("drohnugn" "Drohnugn" nil :count 0)
@@ -133,8 +84,9 @@
     ("ejtzt" "jetzt" nil :count 0)
     ("emhr" "mehr" nil :count 1)
     ("endlcih" "endlich" nil :count 2)
-    ("endlihc" "endlich" nil :count 3)
-    ("enora" "Enora" nil :count 154)
+    ("endlihc" "endlich" nil :count 4)
+    ("enora" "Enora" nil :count 170)
+    ("entshceidungen" "Entscheidungen" nil :count 0)
     ("entsprehcend" "entsprechend" nil :count 0)
     ("entusiastisch" "enthusiastisch" nil :count 0)
     ("eprsönlich" "persönlich" nil :count 0)
@@ -148,6 +100,7 @@
     ("ewrden" "werden" nil :count 0)
     ("falshen" "falschen" nil :count 0)
     ("farhtwindes" "Fahrtwind" nil :count 0)
+    ("fassunglos" "fassungslos" nil :count 0)
     ("fehleinchätzung" "Fehleinschätzung" nil :count 0)
     ("ferundlichen" "freundlichen" nil :count 0)
     ("fokssiert" "fokussiert" nil :count 0)
@@ -155,7 +108,7 @@
     ("freundlihcen" "freundlichen" nil :count 0)
     ("freunschaft" "Freundschaft" nil :count 0)
     ("friedlcih" "friedlich" nil :count 0)
-    ("frua" "Frau" nil :count 3)
+    ("frua" "Frau" nil :count 4)
     ("förderlihc" "förderlich" nil :count 0)
     ("fürher" "früher" nil :count 0)
     ("geanu" "genau" nil :count 1)
@@ -179,21 +132,23 @@
     ("gewöhliche" "gewöhnliche" nil :count 0)
     ("gleihc" "gleich" nil :count 0)
     ("gliech" "gleich" nil :count 0)
+    ("gmacht" "gemacht" nil :count 0)
     ("gnaz" "ganz" nil :count 2)
-    ("gnaze" "ganze" nil :count 0)
+    ("gnaze" "ganze" nil :count 1)
     ("gnazen" "ganzen" nil :count 0)
     ("grüdnlcih" "gründlich" nil :count 0)
-    ("habne" "haben" nil :count 7)
+    ("habne" "haben" nil :count 8)
     ("haebn" "haben" nil :count 0)
     ("haltne" "halten" nil :count 0)
     ("haustüpr" "Haustür" nil :count 0)
     ("heir" "hier" nil :count 1)
     ("heruas" "heraus" nil :count 0)
     ("hlefen" "helfen" nil :count 0)
-    ("ihc" "ich" nil :count 17)
-    ("iher" "ihre" nil :count 47)
-    ("iherm" "ihrem" nil :count 0)
-    ("ihern" "ihren" nil :count 23)
+    ("hoffentlihc" "Hoffentlich" nil :count 0)
+    ("ihc" "ich" nil :count 20)
+    ("iher" "ihre" nil :count 52)
+    ("iherm" "ihrem" nil :count 1)
+    ("ihern" "ihren" nil :count 25)
     ("incht" "nicht" nil :count 0)
     ("infach" "einfach" nil :count 0)
     ("informastionsquelle" "Informationsquelle" nil :count 0)
@@ -205,8 +160,11 @@
     ("krankehiten" "Krankheiten" nil :count 0)
     ("krnakheiten" "Krankheiten" nil :count 0)
     ("kurzn" "kurzen" nil :count 0)
+    ("lebne" "Leben" nil :count 0)
     ("letzetn" "letzten" nil :count 0)
+    ("liecht" "leicht" nil :count 0)
     ("logscihe" "logische" nil :count 0)
+    ("lächerlihc" "lächerlich" nil :count 0)
     ("machne" "machen" nil :count 0)
     ("mahcen" "machen" nil :count 0)
     ("mcih" "mich" nil :count 14)
@@ -218,7 +176,7 @@
     ("miteineander" "miteinander" nil :count 0)
     ("mlöchte" "möchte" nil :count 0)
     ("mneshc" "Mensch" nil :count 0)
-    ("moment" "Moment" nil :count 2)
+    ("moment" "Moment" nil :count 3)
     ("msusten" "mussten" nil :count 0)
     ("möcjte" "möchte" nil :count 0)
     ("möglcihkeit" "Möglichkeit" nil :count 1)
@@ -232,7 +190,7 @@
     ("natürclih" "natürlich" nil :count 1)
     ("natürlcih" "natürlich" nil :count 16)
     ("natürlihc" "Natürlich" nil :count 1)
-    ("nciht" "nicht" nil :count 21)
+    ("nciht" "nicht" nil :count 22)
     ("ncihts" "nichts" nil :count 1)
     ("ncith" "nicht" nil :count 0)
     ("ncoh" "noch" nil :count 0)
@@ -246,10 +204,10 @@
     ("ntürlich" "natürlich" nil :count 0)
     ("nuicht" "nicht" nil :count 0)
     ("nämclih" "nämlich" nil :count 2)
-    ("nämlcih" "nämlich" nil :count 0)
+    ("nämlcih" "nämlich" nil :count 1)
     ("obowhl" "obwohl" nil :count 0)
     ("offensichtlcih" "offensichtlich" nil :count 0)
-    ("offensichtlihc" "offensichtlich" nil :count 6)
+    ("offensichtlihc" "offensichtlich" nil :count 7)
     ("ohen" "Ohne" nil :count 0)
     ("ok" "okay" nil :count 28)
     ("pandmie" "Pandemie" nil :count 0)
@@ -274,14 +232,16 @@
     ("schließlcih" "schließlich" nil :count 1)
     ("schließlihc" "Schließlich" nil :count 0)
     ("schlmmer" "schlimmer" nil :count 0)
+    ("schuate" "schaute" nil :count 0)
     ("scih" "sich" nil :count 4)
     ("sciher" "sicher" nil :count 0)
     ("seblst" "selbst" nil :count 1)
     ("sicherheit" "Sicherheit" nil :count 1)
+    ("siete" "Seite" nil :count 0)
     ("sihc" "sich" nil :count 5)
     ("sihcer" "sicher" nil :count 1)
     ("silouetten" "Silhouetten" nil :count 0)
-    ("sit" "ist" nil :count 3)
+    ("sit" "ist" nil :count 4)
     ("situtaionen" "Situationen" nil :count 0)
     ("sonderlcih" "sonderlich" nil :count 0)
     ("sonderlihc" "sonderlich" nil :count 0)
@@ -290,13 +250,13 @@
     ("stekcst" "steckst" nil :count 0)
     ("sthen" "stehen" nil :count 0)
     ("sympatisch" "sympathisch" nil :count 0)
-    ("tochter" "Tochter" nil :count 5)
+    ("tochter" "Tochter" nil :count 8)
     ("trotzden" "trotzdem" nil :count 0)
     ("trotzdme" "trotzdem" nil :count 8)
     ("tödlcih" "tödlich" nil :count 0)
     ("uach" "auch" nil :count 5)
     ("uahc" "auch" nil :count 0)
-    ("udn" "und" nil :count 11)
+    ("udn" "und" nil :count 14)
     ("ugt" "Gut" nil :count 0)
     ("unerstützen" "unterstützen" nil :count 0)
     ("unf" "und" nil :count 3)
@@ -310,6 +270,7 @@
     ("verantwortlihc" "verantwortlich" nil :count 0)
     ("vergesesn" "vergessen" nil :count 0)
     ("verlassne" "verlassen" nil :count 1)
+    ("vermiesen" "vermiesen" nil :count 0)
     ("versprehcen" "versprechen" nil :count 2)
     ("versrpicht" "verspricht" nil :count 0)
     ("verständlcih" "verständlich" nil :count 5)
@@ -323,13 +284,13 @@
     ("werdne" "werden" nil :count 0)
     ("wichitg" "wichtig" nil :count 0)
     ("wichitig" "wichtig" nil :count 0)
-    ("wirkclih" "wirklich" nil :count 2)
-    ("wirklcih" "wirklich" nil :count 28)
+    ("wirkclih" "wirklich" nil :count 3)
+    ("wirklcih" "wirklich" nil :count 32)
     ("wirklihc" "wirklich" nil :count 0)
     ("wisen" "wissen" nil :count 0)
     ("wissne" "wissen" nil :count 0)
     ("woltle" "wollte" nil :count 0)
-    ("wra" "war" nil :count 12)
+    ("wra" "war" nil :count 13)
     ("wri" "wir" nil :count 0)
     ("wrid" "wird" nil :count 0)
     ("wrude" "wurde" nil :count 1)
@@ -355,32 +316,4 @@
     ("öffentlihces" "öffentliches" nil :count 0)
     ("öffentlihckeit" "Öffentlichkeit" nil :count 0)
    ))
-
-(define-abbrev-table 'outline-mode-abbrev-table '())
-
-(define-abbrev-table 'package-menu-mode-abbrev-table '())
-
-(define-abbrev-table 'process-menu-mode-abbrev-table '())
-
-(define-abbrev-table 'prog-mode-abbrev-table '())
-
-(define-abbrev-table 'select-tags-table-mode-abbrev-table '())
-
-(define-abbrev-table 'snippet-mode-abbrev-table '())
-
-(define-abbrev-table 'special-mode-abbrev-table '())
-
-(define-abbrev-table 'tabulated-list-mode-abbrev-table '())
-
-(define-abbrev-table 'text-mode-abbrev-table '())
-
-(define-abbrev-table 'use-package-statistics-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-git-region-history-mode-abbrev-table '())
-
-(define-abbrev-table 'xref--xref-buffer-mode-abbrev-table '())
 
