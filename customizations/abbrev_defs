@@ -319,7 +319,7 @@
     ("wrude" "wurde" nil :count 1)
     ("wruden" "wurden" nil :count 0)
     ("wrüde" "würde" nil :count 6)
-    ("wrüden" "Würden" nil :count 0)
+    ("wrüden" "würden" nil :count 0)
     ("wünche" "wünsche" nil :count 0)
     ("wüsche" "wünsche" nil :count 0)
     ("wüsnche" "wünsche" nil :count 0)
