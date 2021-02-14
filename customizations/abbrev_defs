@@ -188,7 +188,7 @@
     ("heruas" "heraus" nil :count 0)
     ("heuhte" "heute" nil :count 0)
     ("hlefen" "helfen" nil :count 0)
-    ("hoffentlihc" "Hoffentlich" nil :count 0)
+    ("hoffentlihc" "hoffentlich" nil :count 0)
     ("hoffnugn" "Hoffnung" nil :count 0)
     ("ihc" "ich" nil :count 35)
     ("iher" "ihre" nil :count 71)
